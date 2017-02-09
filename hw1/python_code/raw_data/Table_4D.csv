@@ -1,0 +1,35 @@
+Table with row headers in column A and column headers in rows 7 through 8,,,,,
+"TABLE 4D. Average Monthly Income, Average Earnings, and Number of Months Worked by Advanced Degree Field, 2009",,,,,
+Population age 18 and over where highest degree is an advanced degree,,,,,
+"Income, earnings in dollars; Months worked of last four months",,,,,
+Numbers in thousands,,,,,
+,,,,,
+Field                         ,Number of people,Income,Earnings (FT),Earnings (All),Months worked
+,,,,,
+,,,,,
+TOTAL,"20,850","$6,401 ","$7,790 ","$7,251 ",3.1
+,,,,,
+Agriculture,112,B,B,B,B
+Architecture,288,"$4,471 ","$6,490 ","$5,357 ",3.2
+Business,"2,971","$8,125 ","$9,071 ","$9,510 ",3.2
+Communications,233,"$4,351 ","$4,943 ","$4,486 ",3.4
+Computer,613,"$7,346 ","$8,364 ","$7,785 ",3.5
+Education,"4,421","$4,479 ","$5,194 ","$4,602 ",2.9
+Engineering,"1,211","$7,631 ","$8,811 ","$8,210 ",3
+Literature,350,"$3,942 ","$4,746 ","$4,133 ",3
+Foreign language,129,B,B,B,B
+Law,"1,513","$10,328 ","$13,001 ","$11,677 ",3.5
+Liberal arts,367,"$4,924 ","$6,372 ","$5,568 ",3
+Mathematics,299,"$6,447 ","$7,697 ","$6,533 ",2.9
+"Medicine, dentistry","1,393","$10,790 ","$12,487 ","$12,513 ",3.3
+Natural science,786,"$6,172 ","$7,683 ","$7,239 ",2.9
+"Nursing, public health",757,"$5,412 ","$6,755 ","$6,209 ",3.2
+Philosophy,340,"$4,593 ","$4,769 ","$4,579 ",3
+Psychology,885,"$5,234 ","$7,276 ","$5,816 ",3.3
+Social science,709,"$4,477 ","$6,005 ","$4,921 ",2.9
+Other,"3,470","$5,267 ","$6,591 ","$5,947 ",3.1
+Footnotes:,,,,,
+"(FT) refers to full-time workers, (All) refers to all with earnings",,,,,
+"(B) Derived measure not shown when base is less than 200,000",,,,,
+,,,,,
+"Source: US Census Bureau, Survey of Income and Program Participation, 2008 Panel.  For more information on sampling and nonsampling error see http://www.sipp.census.gov/sipp/source.html",,,,,

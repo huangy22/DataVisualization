@@ -1,0 +1,34 @@
+Table with row headers in column A and column headers in rows 7 through 8,,,,,
+"TABLE 4C. Average Monthly Income, Average Earnings, and Number of Months Worked by Bachelor's Degree Field, 2009",,,,,
+Population age 18 and over where highest degree is a bachelor's degree,,,,,
+"Income, earnings in dollars; Months worked of last four months",,,,,
+Numbers in thousands,,,,,
+,,,,,
+Field                         ,Number of people,Income,Earnings (FT),Earnings (All),Months worked
+,,,,,
+,,,,,
+TOTAL,"38,782","$4,259 ","$5,445 ","$5,034 ",3
+,,,,,
+Agriculture,547,"$3,655 ","$4,409 ","$4,159 ",3.4
+Architecture,"1,208","$3,525 ","$5,230 ","$4,386 ",3.1
+Business,"8,371","$4,939 ","$5,959 ","$5,697 ",3.2
+Communications,"1,255","$3,980 ","$5,017 ","$4,603 ",3.4
+Computer,"1,418","$5,722 ","$6,743 ","$6,681 ",3.5
+Education,"4,550","$2,849 ","$3,806 ","$3,320 ",2.7
+Engineering,"2,795","$6,011 ","$7,322 ","$6,843 ",3.1
+Literature,958,"$3,078 ","$5,275 ","$4,056 ",2.7
+Foreign language,226,"$3,110 ","$4,458 ","$3,475 ",2.9
+Health sciences,"2,165","$3,710 ","$4,984 ","$4,236 ",3.1
+Liberal arts,"2,075","$3,427 ","$4,891 ","$4,155 ",2.8
+Mathematics,630,"$4,609 ","$5,921 ","$5,255 ",2.8
+Natural science,"1,824","$3,981 ","$5,124 ","$4,543 ",2.9
+Philosophy,318,"$2,975 ","$4,664 ","$3,701 ",2.8
+Pre-professional,147,B,B,B,B
+Psychology,"1,502","$4,885 ","$4,683 ","$5,894 ",2.9
+Social science,"1,873","$3,608 ","$4,931 ","$4,289 ",3
+Other,"6,921","$4,381 ","$5,377 ","$5,192 ",3.1
+Footnotes:,,,,,
+"(FT) refers to full-time workers, (All) refers to all with earnings",,,,,
+"(B) Derived measure not shown when base is less than 200,000",,,,,
+,,,,,
+"Source: US Census Bureau, Survey of Income and Program Participation, 2008 Panel.  For more information on sampling and nonsampling error see http://www.sipp.census.gov/sipp/source.html",,,,,

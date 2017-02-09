@@ -1,0 +1,23 @@
+Table with row headers in column A and column headers in rows 6 through 7,,,,,
+"TABLE 2A. Average Monthly Income and Earnings, and Average Months Worked in Preceding Four Months by Education, 2009",,,,,
+Population age 18 and over. Earnings apply to employed population only.,,,,,
+"Numbers in thousands. Earnings, income in dollars. Months worked of last 4",,,,,
+,,,,,
+Highest level completed,Number of people,Total income,Earnings (FT),Earnings (All),Months worked
+,,,,,
+,,,,,
+Elementary,"12,002","$1,166 ","$2,136 ","$1,813 ",1.7
+Some high school,"18,260","$1,205 ","$2,434 ","$1,840 ",1.8
+High school graduate,"57,880","$1,960 ","$3,179 ","$2,631 ",2.3
+Some college,"35,337","$2,204 ","$3,598 ","$2,789 ",2.6
+Vocational certificate*,"24,709","$2,400 ","$3,538 ","$2,945 ",2.6
+Associate's degree,"18,429","$3,001 ","$4,166 ","$3,562 ",3
+Bachelor's degree,"38,782","$4,259 ","$5,445 ","$5,034 ",3
+Master's degree,"15,132","$5,564 ","$6,731 ","$6,243 ",3.1
+Professional degree,"3,232","$9,501 ","$11,927 ","$11,071 ",3.3
+Doctorate degree,"2,486","$7,466 ","$8,434 ","$8,116 ",3.2
+Footnotes:,,,,,
+"(FT) refers to full-time workers, (All) refers to all with earnings.",,,,,
+* Changes were made in the way the data were collected for people who received vocational certificates in the 2004 panel.  Users will therefore see some differences                                                      in the estimates in this table compared to 2001 and previous panels.  ,,,,,
+,,,,,
+"Source: US Census Bureau, Survey of Income and Program Participation, 2008 Panel.  For more information on sampling and nonsampling error see http://www.sipp.census.gov/sipp/source.html",,,,,

@@ -1,0 +1,531 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rang",
+				"rangeBand"
+			],
+			[
+				"range",
+				"rangeBands"
+			],
+			[
+				"inn",
+				"innerHeight"
+			],
+			[
+				"te",
+				"text-anchor"
+			],
+			[
+				"in",
+				"innerWidth"
+			],
+			[
+				"plot_",
+				"plot_edu_age_1"
+			],
+			[
+				"st",
+				"steelblue"
+			],
+			[
+				"xA",
+				"xAxisG"
+			],
+			[
+				"inner",
+				"innerWidth"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"len",
+				"length_button"
+			],
+			[
+				"yC",
+				"yColumns"
+			],
+			[
+				"x",
+				"xColumn"
+			],
+			[
+				"Bar",
+				"BarGraph"
+			],
+			[
+				"S",
+				"ScatterWork"
+			],
+			[
+				"Gr",
+				"GroupBarIncome"
+			],
+			[
+				"pa",
+				"labelPadding"
+			],
+			[
+				"Hig",
+				"Highest"
+			],
+			[
+				"y",
+				"yColumn"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5285,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown exten",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"Set",
+				"Set Syntax: Textile"
+			],
+			[
+				" install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit"
+	],
+	"file_history":
+	[
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/plot_01_edu_sex.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/plot_01_edu_race.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/html/GroupBarGraph.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/ML589/HW/HW01/Submission/Code/cross_validation.py",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/data_01_edu_sex.csv",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/plot_01_edu_age_2.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/plot_01_edu_age_1.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/data_01_edu_age_2.csv",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/data_01_edu_age_1.csv",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/table_01_line.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/table_01.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/d3.button.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/table_2A.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/raw_data/Table02.csv",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/submit/index.html",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/test/horizontal_barplot.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/test/minimalistic_barplot.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/test.html",
+		"/Users/yuan/Dropbox/dissertation/UMass/to_do.md",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/tutorials/BarGraph.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/index.html",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/Table_2A.csv",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW1/data.tsv",
+		"/Users/yuan/Desktop/mywebpage.html",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/SegmentsInString/SegmentInString.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/ValidParenthese/ValidParenthese_2.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/ValidParenthese/ValidParenthese.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/LongestCommonPrefix/LongestCommonPrefix.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/RomanToInteger/RomanToInteger.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/RansomNote/RansomNote.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/StringToIntegerATOI/StringToInteger.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/java/RotateFunction/RotateFunction.java",
+		"/Users/yuan/Dropbox/DataScience/HeadFirstJava/chap2_dog.java",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/SwapPairsLinkedList/SwapPairsLinkedList_Recursive.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/SwapPairsLinkedList/SwapPairsLinkedList.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/RemoveLinkedListElements/RemoveLinkedListElements.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/RemoveDuplicateLinkedList/RemoveDuplicateLinkedList.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/ReverseLinkedList/ReverseLinkedList.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/PalindromeLinkedList/PalindromeLinkedList.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/LongestPanlidrome/LongestPanlidrome.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/FindAnagrams/FindAnagrams.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/NumberofBoomerangs/NumberofBoomerangs.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/LinkedListCycleII/LinkedListCycleII.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/LinkedListCycle/LinkedListCycle.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/HappyNumber/HappyNumber_FloydCycle.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/HappyNumber/HappyNumber.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IsomorphicString/IsomorphicString_map.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IsomorphicString/IsomorphicString.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IslandPerimeter/IslandPerimeter.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/BullsAndCows/BullandCow.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/WordPattern/WordPattern_istringstream.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/WordPattern/WordPattern.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/Sudoku/Sudoku.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IntersectionTwoArraysII/IntersectionTwoArraysII_sorted.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IntersectionTwoArraysII/IntersectionTwoArraysII.cpp",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/yuan/Dropbox/dissertation/umassthesis-master/README.md",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IntersectionTwoArrays/IntersectionTwoArrays.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/ContainDuplicate/ContainDuplicate.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/PlusOne/PlusOne.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MoveZeros/MoveZeros.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MergeSortedList/MergeSortedList.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MinStack/MinStack_oldmin.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MinStack/MinStack_diff.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MergeSortedArrayInPlace/MergeSortedArrayInPlace.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MajorityElement/MajorElement_Random.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MajorityElement/MajorElement_Voting.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MajorityElement/MajorElement_Sort.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/MajorityElement/MajorElement.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/PascalTriangle/PascalTriangle.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/RemoveElement/RemoveElement.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/FindDisappearNumbers/FindDisappearNumbers.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/BestBuySell/BestBuySell.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/ContainDuplicateII/ContainDuplicateII.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/PsascalTriangleII/PascalTriangleII.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/CountingPrimes/CountingPrimes.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/IntersecTwoLinkedLists/IntersecTwoLinkedLists.cpp",
+		"/Users/yuan/Dropbox/DataScience/leetcode/algorithms/cpp/ThirdMaximun/ThirdMaximum.cpp",
+		"/Users/yuan/Dropbox/DataScience/Projects/Titanic/code/README.md",
+		"/Users/yuan/Documents/DataScience/leetcode/algorithms/cpp/ContainerMostWater/ContainerMostWater.cpp",
+		"/Users/yuan/Documents/DataScience/notes/Leetcode/Leetcode-2.md",
+		"/Users/yuan/Documents/DataScience/sources/README.md",
+		"/Users/yuan/Documents/DataScience/Algorithms Descriptions/Regression Algorithms.md",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_drafts/Leetcode-3.md",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_posts/2016-12-22-Leetcode-2.md",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_drafts/Leetcode-2.md",
+		"/Users/yuan/Documents/DataScience/Leetcode_Algorithms_1.md",
+		"/Users/yuan/Documents/DataScience/leetcode/README.md",
+		"/Users/yuan/Documents/DataScience/leetcode/algorithms/cpp/FindDifference/FindDifference.cpp",
+		"/Users/yuan/Documents/DataScience/leetcode/algorithms/cpp/RemoveNodeFromEnd/RemoveNodeFromEnd.cpp",
+		"/Users/yuan/Documents/DataScience/leetcode/algorithms/cpp/FourSumII/FourSumII.cpp",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_posts/2016-12-21-Leetcode-1.md",
+		"/Users/yuan/Documents/DataScience/leetcode/algorithms/cpp/FourSum/FourSum.cpp",
+		"/Users/yuan/Documents/DataScience/leetcode/algorithms/cpp/ThreeSum/ThreeSum.cpp",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_drafts/Leetcode-1.md",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_drafts/Leetcode_1.md",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings",
+		"/Users/yuan/Documents/DataScience/Hexo/source/_posts/2016-12-21-sample.md",
+		"/Users/yuan/Documents/DataScience/Algorithms Descriptions/Decision Tree.md",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/Bold and Italic Markers.tmPreferences",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings",
+		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/Users/yuan/Documents/DataScience/Algorithms List.md",
+		"/Users/yuan/Documents/DataScience/MOOCS/Algorithms MIT 6006/Week2/solution/tests/1gate.svg",
+		"/Users/yuan/Documents/DataScience/MOOCS/Algorithms MIT 6006/Week1/rec02_code/Rakefile",
+		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/hyde.css",
+		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/syntax.css",
+		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/style.css",
+		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/poole.css",
+		"/Users/yuan/Dropbox/dissertation/main.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/chap-HMBW.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/thanks.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/chap-4Potts.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/chap-intro.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/chap-pyrochlore.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/abstract.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/pub.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/chap-req.tex",
+		"/Users/yuan/Dropbox/dissertation/chapter/bib.tex",
+		"/Users/yuan/Dropbox/PhD/chapter/chap-higgs.tex",
+		"/Users/yuan/Dropbox/PhD/main.tex",
+		"/Users/yuan/Dropbox/dissertation/sources/hmbw/HMBW_AT_rev_v1.00.tex",
+		"/Users/yuan/Dropbox/Publications/Pyrochlore_Paper/DiagMCPyrochlore.tex",
+		"/Users/yuan/Dropbox/dissertation/sources/largeq/planar_AF_largeq_PRE_rev2.tex",
+		"/Users/yuan/Dropbox/dissertation/sources/4Potts/union-jack_prl.tex"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"阻错",
+			"‘",
+			"“",
+			"’",
+			"‘",
+			"“",
+			"’",
+			"ddot",
+			"d'do't",
+			"acute",
+			"note",
+			"anderson2",
+			"Anderson",
+			"\\mathcal{H}",
+			"Ising",
+			"eqs",
+			"式",
+			"eq:Z_AT_2",
+			"Ktilde",
+			"eqs",
+			"subeq",
+			"subequation",
+			"su'b'e'qua'tion",
+			"lem",
+			"\\rangle",
+			"\\langle",
+			">",
+			"<",
+			"hat",
+			"配位数",
+			"伊辛"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"阻挫",
+			"'",
+			"\"",
+			"'",
+			"\"",
+			"'",
+			"’",
+			"H",
+			"\\langle ",
+			" \\rangle",
+			"\\langle",
+			"widehat"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5229,
+								5229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 1606.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 184.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 278.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"project": "hw1.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/dissertation/main.tex"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

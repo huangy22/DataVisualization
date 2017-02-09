@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v3.js"></script>
+  <title>Education attainment and Income</title>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    html, body {overflow: auto;}
+    p {text-indent: 30px; margin-left: 30px; margin-right: 30px;}
+    h1{text-indent: 20px; margin-left: 5px; margin-right: 5px;}
+    h2{text-indent: 30px; margin-left: 5px; margin-right: 5px;}
+    h3{text-indent: 40px; margin-left: 5px; margin-right: 5px;}
+    svg {margin-left:auto; margin-right:auto; display: block;} 
+    line    {stroke:#ddd;shape-rendering: crispEdges; }
+    .axis {shape-rendering: crispEdges;}
+    .axis line{stroke:#000; stroke-width:1;}
+    .axis path{stroke:#000; stroke-width:1;}
+    .domain {fill:none; stroke:#000; stroke-width:1.5;}
+    .axis .minor{fill:none; stroke-width:1;}
+    .axis text{font:sans-serif; font-size: 12pt; font-weight: bold;}
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Average/Median Monthly Income and Working Time in the Preceding Four Months by Education, 2009</h1>
+  <p></p>
+  <h3>The number of people with different Education Attainment</h3>
+  <p></p>
+
+  <div id="bar_edu_number"></div>
+  <script type="text/javascript" src="plot_2AJ_edu_number.js"></script>
+
+  <!-- <p>Caption:</p> -->
+  <h3>Monthly Income, Full time job Earnings, Earnings for all jobs by Education</h3>
+  <p><g>
+    <button class="button" id="button-0"  onClick="Plot_edu_income.plot(0)">Monthly Income Mean</button> 
+    <button class="button" id="button-1"  onClick="Plot_edu_income.plot(1)">Monthly Income Median</button> 
+    <button class="button" id="button-2"  onClick="Plot_edu_income.plot(2)">Full-time job Earning Mean</button> 
+    <button class="button" id="button-3"  onClick="Plot_edu_income.plot(3)">Full-time job Earning Median</button> 
+    <button class="button" id="button-4"  onClick="Plot_edu_income.plot(4)">All job Earning Mean</button> 
+    <button class="button" id="button-5"  onClick="Plot_edu_income.plot(5)">All job Earning Median</button> 
+  </g></p>
+  <div id="line_edu_income"></div>
+  <script type="text/javascript" src="plot_2AJ_edu_income.js"></script>
+
+  <h3>The line of regression for Median Monthly Income by Education</h3>
+  <div id="line_edu_income_2"></div>
+  <script type="text/javascript" src="plot_2AJ_edu_income_2.js"></script>
+
+  <h3>Working time by Education</h3>
+  <div id="line_edu_working"></div>
+  <script type="text/javascript" src="plot_2AJ_edu_work.js"></script>
+
+  <h3>The statistics and correlations</h3>
+  <p>The statistics(mean, standard deviation, min, max, 25%,50%,75% quantile) of the variables: </p>
+  <div id="table_statistics">   </div>
+  <script type="text/javascript"charset="utf-8">
+    d3.text("stat_2A_2J.csv", function(data) {
+      var parsedCSV = d3.csv.parseRows(data);
+
+      var container = d3.select("#table_statistics")
+          .append("table")
+
+          .selectAll("tr")
+              .data(parsedCSV).enter()
+              .append("tr")
+
+          .selectAll("td")
+              .data(function(d) { return d; }).enter()
+              .append("td")
+              .text(function(d) { return d; });
+    });
+  </script>
+  <p>The correlation between the variables:</p>
+  <div id="table_correlations"></div>
+  <script type="text/javascript"charset="utf-8">
+    d3.text("corr_2A_2J.csv", function(data) {
+      var parsedCSV = d3.csv.parseRows(data);
+
+      var container = d3.select("#table_correlations")
+          .append("table")
+
+          .selectAll("tr")
+              .data(parsedCSV).enter()
+              .append("tr")
+
+          .selectAll("td")
+              .data(function(d) { return d; }).enter()
+              .append("td")
+              .text(function(d) { return d; });
+    });
+  </script>
+
+  <h3>The line of regression for Months Worked by Income level</h3>
+  <div id="line_income_working"></div>
+  <script type="text/javascript" src="plot_2AJ_income_work.js"></script>
+
+  <h1>Educational Attainment in the United States, 2015</h1>
+  <h2>Table 1: The Educational Attainment of the Population 18 Years and Over, by Age, Sex, Race, and Hispanic Origin, 2015</h2>
+  <p>This data set is from a study in 2015 of 242,248,000 people at age 18 and over, including the data of their educational attainment, sex, age, race and hispanic origin. From this data set, we could learn about how people's educational status depend on their age, sex and race.</p>
+
+  <!-- fig1 -->
+  <h3>Education by Age</h3>
+  <p>A bar plot of multiple histograms of people's educational attainment at different age, including the mean, std. There is a interactive bar that allows one to change the age region. </p>
+
+  <p><g>
+    <button class="button" id="button-0"  onClick="Plot_edu_age_1.plot(0)">Total</button> 
+    <button class="button" id="button-1"  onClick="Plot_edu_age_1.plot(1)">18-24</button> 
+    <button class="button" id="button-2"  onClick="Plot_edu_age_1.plot(2)">25-29</button> 
+    <button class="button" id="button-3"  onClick="Plot_edu_age_1.plot(3)">30-34</button> 
+    <button class="button" id="button-4"  onClick="Plot_edu_age_1.plot(4)">35-39</button> 
+    <button class="button" id="button-5"  onClick="Plot_edu_age_1.plot(5)">40-44</button> 
+    <button class="button" id="button-6"  onClick="Plot_edu_age_1.plot(6)">45-49</button> 
+    <button class="button" id="button-7"  onClick="Plot_edu_age_1.plot(7)">50-54</button> 
+    <button class="button" id="button-8"  onClick="Plot_edu_age_1.plot(8)">55-59</button> 
+    <button class="button" id="button-9"  onClick="Plot_edu_age_1.plot(9)">60-64</button> 
+    <button class="button" id="button-10" onClick="Plot_edu_age_1.plot(10)">65-69</button> 
+    <button class="button" id="button-11" onClick="Plot_edu_age_1.plot(11)">70-74</button> 
+    <button class="button" id="button-12" onClick="Plot_edu_age_1.plot(12)">>=79</button> 
+  </g></p>
+
+  <div id="bar_edu_age"></div>
+  <script type="text/javascript" src="plot_01_edu_age_1.js"></script>
+
+  <!-- fig2 -->
+  <h3>The correlation between the Education Attainment and Age</h3>
+  <p>Convert the education attainment and age data into numerical form.</p>
+  <p>Mean, Standard Deviation, Correlation.</p>
+  <p>Scatterplot for the educational attainment as a function of age. With the fitted line.</p>
+  <div id="line_edu_age"></div>
+  <script type="text/javascript" src="plot_01_edu_age_2.js"></script>
+  <p></p>
+  
+  <!-- fig3 -->
+  <h3>Education by Sex</h3>
+  <p>A stacked bar plot showing the educational attainment of male and female of all age.</p>
+  <div id="bar_edu_sex"></div>
+  <script type="text/javascript" src="plot_01_edu_sex.js"></script>
+  
+  <!-- fig4 -->
+  <h3>Education by Race</h3>
+  <p>A stacked bar plot showing the educational attainment of different races of all age.
+  Multiple line plot with mean and std on the annotation.</p>
+  <div id="bar_edu_race"></div>
+  <script type="text/javascript" src="plot_01_edu_race.js"></script>
+
+<!--   <h2>Table 2: Educational Attainment of the Population 25 Years and Over, by Selected Characteristics: 2015</h2>
+
+  <p>This data set is from a study of 212,132,000 people at age 25 and over, including their educational attainment, marital status, household relationship, Citizenship, Nativity, Occupation, and Industray domain information. I select three interesting prospective to visualize, which are the education attainment by nativity, occupation and industry.</p> -->
+
+  <!-- fig5 -->
+  <!-- <h3>Education by nativity</h3>
+  <p>Several Pie charts for different educational level with nativity information.</p>
+  <div id="pie_edu_nat"></div> -->
+
+  <!-- fig6 -->
+  <!-- <h3>Education by Industry and Occupation</h3>
+  <p>Use a heat map to represent the educational level, use the occupation and industry as x and y axis.
+  <div id="heat_edu_occu"></div> -->
+
+</body>
