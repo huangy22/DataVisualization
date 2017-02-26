@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"bubble",
+				"bubbleChart"
+			],
+			[
+				"pie",
+				"pieChart"
+			],
+			[
+				"bar",
+				"barChart"
+			],
+			[
+				"bub",
+				"bubbleChart"
+			],
+			[
+				"color",
+				"colorList"
+			],
+			[
+				"co",
+				"color_axis"
+			],
+			[
+				"remove",
+				"remove_empty_groups"
+			],
+			[
+				"remo",
+				"remove_empty_groups"
+			],
+			[
+				"sca",
+				"scatter_axis"
+			],
+			[
+				"max",
+				"maxColor"
+			],
+			[
+				"colo",
+				"colorList"
+			],
+			[
 				"wek",
 				"weekdayValue"
 			],
@@ -99,24 +143,8 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6546,
+				"buffer_size": 3108,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "facebook.csv",
-			"settings":
-			{
-				"buffer_size": 37389,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw1/plot_01_edu_age_1.js",
-			"settings":
-			{
-				"buffer_size": 4385,
 				"line_ending": "Unix"
 			}
 		}
@@ -190,11 +218,19 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW2/dc_crossfilter",
-		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW2/dc_crossfilter/js"
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/preprocess",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/vega"
 	],
 	"file_history":
 	[
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/plot.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/js/dc.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/js/d3.js",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/vega/vega.json",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/vega/index.html",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/metadata_wine.json",
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw1/plot_01_edu_age_1.js",
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW2/vega_test_map/index.html",
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW2/vega_test_map/vega.json",
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/HW2/index.html",
@@ -315,18 +351,11 @@
 		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings",
 		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
 		"/Users/yuan/Documents/DataScience/Algorithms List.md",
-		"/Users/yuan/Documents/DataScience/MOOCS/Algorithms MIT 6006/Week2/solution/tests/1gate.svg",
-		"/Users/yuan/Documents/DataScience/MOOCS/Algorithms MIT 6006/Week1/rec02_code/Rakefile",
-		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/hyde.css",
-		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/syntax.css",
-		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/style.css",
-		"/Users/yuan/Documents/DataScience/pelican_themes/pelican-hyde/static/css/poole.css",
-		"/Users/yuan/Dropbox/dissertation/main.tex",
-		"/Users/yuan/Dropbox/dissertation/chapter/chap-HMBW.tex"
+		"/Users/yuan/Documents/DataScience/MOOCS/Algorithms MIT 6006/Week2/solution/tests/1gate.svg"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -410,15 +439,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6546,
+						"buffer_size": 3108,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6486,
-								6486
+								2651,
+								2651
 							]
 						],
 						"settings":
@@ -439,98 +468,14 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 14
+								"xpos": 70
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 3154.0,
+						"translation.y": 1336.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "facebook.csv",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 37389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"vintage":
-							{
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 0
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw1/plot_01_edu_age_1.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3563,
-								3390
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"vintage":
-							{
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 0
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 1901.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -624,6 +569,8 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"_vintageous_last_buffer_search": "\n         ",
+		"_vintageous_last_buffer_search_command": "vi_octothorp",
 		"_vintageous_reset_during_init": true,
 		"vintage":
 		{

@@ -25,14 +25,13 @@ def read_table(rawfile1, rawfile2):
     df = pd.concat(frames, keys=['red', 'white'])
 
     df.reset_index(level=0, inplace=True)
-    df["level_0"] = df["level_0"].astype('category').cat.rename_categories([1,2]).astype('int')
+    df["level_0"] = df["level_0"].astype('category')
     df.rename(columns={'level_0': 'Type'}, inplace=True)
     return df
 
 def metadata(df):
     print list(df)
     dict = {'category': ['Type', 'quality'],
-            'category_name':{'Type':['red', 'white']},
             'number of category data': 2, 
             'number of numerical data': 11, 
             'numerical': ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol']}
@@ -43,7 +42,7 @@ def metadata(df):
 if __name__ == '__main__':
 
 
-    df = read_table("./raw_data/winequality-red.csv", "./raw_data/winequality-white.csv")
+    df = read_table("../raw_data/winequality-red.csv", "./raw_data/winequality-white.csv")
     df.to_csv("../data_wine.csv", index=False)
     metadata(df)
 

@@ -16,7 +16,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
 
-  <style type="text/css"></style>
+  <style type="text/css">
+    a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+  </style>
 </head>
 
 <body>
@@ -25,38 +34,56 @@
 <div class='content'>
 <div class='container' style='font: 12px sans-serif;'>
 
-  <h3>Facebook</h3>
+  <div>
+    <h3> Select Dataset:</h3>
+    <a  href="javascript:plot('facebook');" class="btn btn-default">Facebook</a>
+    <a  href="javascript:plot('wine');" class="btn btn-default">Wine</a>
+  </div>
 
   <div class='row'>
     <div class='span12'>
       <div class='span8' id='dc-bubble-chart'>
+	<h4> Scatterplot</h4>
         <p>x Axis:
         <select id="selectX">
           <option>Select X axis</option>
         </select>
+	y Axis:
+	<select id="selectY">
+	  <option>Select Y axis</option>
+	</select>
         </p>
-        <p>
-        y Axis:
-        <select id="selectY">
-          <option>Select Y axis</option>
-        </select>
-        </p>
-        <p><button class="button" id="resetBubble" >reset</button> </p>
+        <!-- <p><button class="button" id="resetBubble" >reset</button> </p> -->
         <div id="bubble-chart">
-          <span class="display-qux"></span> 
+          <!-- <span class="display-qux"></span>  -->
         </div>
       </div>
-      <div class='span4' id='small-charts'>
+      <div class='span4' id='dc-small-charts'>
+        <!-- <p><button class="button" id="resetBar" >reset</button> </p>  -->
         <p>
-        <select id="selectBar">
-          <option>Select X axis</option>
-        </select>
+          <h4>
+          Type (represented by color)
+          </h4>
+          <div id='pie-chart'>
+          </div>
         </p>
-        <p><button class="button" id="resetBar" >reset</button> </p> 
-        <div id='bar-chart'>
-        </div>
+
+        <p>
+          <h4>
+          Histograms
+          </h4>
+          <p>
+          x Axis:
+          <select id="selectBar">
+            <option>Select X axis</option>
+          </select>
+          </p>
+          <div id='bar-chart'>
+          </div>
+        </p>
       </div>
     </div>
+    <a  href="javascript:resetAll();" class="btn btn-default" > reset all</a>
   </div>
 
   <h5>Generated with 
@@ -65,13 +92,29 @@
     <a href="http://d3js.org/">d3.js</a> and 
     <a href="http://twitter.github.io/bootstrap/">bootstrap</a>.
   </h5>
-  <p>Earthquake data via <a href="http://geonet.org.nz">Geonet</a>.</p>
+
+  <p>The facebook dataset is public available for research. The details are described in [Moro et al., 2016].</p>
+
+  <p>[Cortez et al., 2009] P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
+        Modeling wine preferences by data mining from physicochemical properties.
+	In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
+  Available at: <a href="http://dx.doi.org/10.1016/j.dss.2009.05.016"> [Elsevier] </a>
+  <a href="http://www3.dsi.uminho.pt/pcortez/winequality09.pdf"> [Pre-press (pdf)] </a>
+  <a href="http://www3.dsi.uminho.pt/pcortez/dss09.bib"> [bib]</a>
+  </p>
+  
+  <p>The wine dataset is public available for research. The details are described in [Cortez et al., 2009]. </p>
+
+  <p>[Moro et al., 2016] S. Moro, P. Rita and B. Vala. Predicting social media performance metrics and evaluation 
+  of the impact on brand building: A data mining approach. Journal of Business Research, Elsevier, In press.
+  Available at: <a href ="http://dx.doi.org/10.1016/j.jbusres.2016.02.010"> http://dx.doi.org/10.1016/j.jbusres.2016.02.010</a></p>
 
 </div>
 </div>
 </div>
   
 <script type="text/javascript" src="plot.js"></script>
+
   
 </body>
 </html>
