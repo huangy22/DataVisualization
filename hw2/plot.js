@@ -65,7 +65,7 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
   * Crossfilter can filter by exact value, or by range. *
   ******************************************************/
   var bubbleValue = facts.dimension(function (d){
-    return [d[xColumn], d[yColumn]];
+    return [d[xColumn], d[yColumn], d[bar_axis[0]]];
   });
 
   var bubbleGroup = bubbleValue.group().reduce(
@@ -75,8 +75,8 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
         p.ySum += d[yColumn];
         p.xColumn = p.xSum / parseFloat(p.count);
         p.yColumn = p.ySum / parseFloat(p.count);
-        p.color += d[bar_axis[0]];
-        p.size += d[bar_axis[1]];
+        p.color = d[bar_axis[0]];
+        p.size = d[bar_axis[1]];
         return p;
       },
       function (p, d){
@@ -95,7 +95,7 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
      );
 
     // bubble chart
-      bubbleChart.width(700)
+bubbleChart.width(700)
 	.height(550)
 	.margins({top: 10, right: 10, bottom: 50, left: 60})
 	.dimension(bubbleValue)
@@ -103,6 +103,7 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
 	.transitionDuration(500)
 	.colors(color_scale)
 	.colorAccessor(function (p) {
+    console.log(p.value.color, color_scale(p.value.color));
 		return p.value.color;
 	    })
 	.keyAccessor(function (p) {
@@ -133,6 +134,11 @@ function resetAll(){
 }
 
 function plot(dataset){
+
+  $(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+  });
 
   d3.json("metadata_"+dataset+".json", function(error, data) {
       n_scatter = data["number of numerical data"];

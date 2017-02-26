@@ -4,16 +4,16 @@
 		"selected_items":
 		[
 			[
+				"bar",
+				"bar_axis"
+			],
+			[
 				"bubble",
 				"bubbleChart"
 			],
 			[
 				"pie",
 				"pieChart"
-			],
-			[
-				"bar",
-				"barChart"
 			],
 			[
 				"bub",
@@ -139,15 +139,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3108,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -219,11 +210,11 @@
 	"expanded_folders":
 	[
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2",
-		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/preprocess",
-		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/vega"
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/preprocess"
 	],
 	"file_history":
 	[
+		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/index.html",
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/plot.js",
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/js/dc.js",
 		"/Users/yuan/Dropbox/DataScience/Courses/DV590/DataVisualization/hw2/js/d3.js",
@@ -350,8 +341,7 @@
 		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/Bold and Italic Markers.tmPreferences",
 		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings",
 		"/Users/yuan/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
-		"/Users/yuan/Documents/DataScience/Algorithms List.md",
-		"/Users/yuan/Documents/DataScience/MOOCS/Algorithms MIT 6006/Week2/solution/tests/1gate.svg"
+		"/Users/yuan/Documents/DataScience/Algorithms List.md"
 	],
 	"find":
 	{
@@ -430,54 +420,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3108,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2651,
-								2651
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 70
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 1336.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
