@@ -4,7 +4,7 @@
   <meta charset='utf-8'>
   <meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
 
-  <title>dc.js Experiment</title>
+  <title>Interactive Visualizations on Facebook and Wine datasets</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.0/dc.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
   <link href="colorbrewer.css" media="screen, print" rel="stylesheet" />
@@ -54,10 +54,14 @@
         <select id="selectX">
           <option>Select X axis</option>
         </select>
-	y Axis:
-	<select id="selectY">
-	  <option>Select Y axis</option>
-	</select>
+      	y Axis:
+      	<select id="selectY">
+      	  <option>Select Y axis</option>
+      	</select>
+        color:
+        <select id="selectColor">
+          <option>Select Color</option>
+        </select>
         </p>
         <!-- <p><button class="button" id="resetBubble" >reset</button> </p> -->
         <div id="bubble-chart">
@@ -68,7 +72,7 @@
         <!-- <p><button class="button" id="resetBar" >reset</button> </p>  -->
         <p>
           <h4>
-          Type (represented by color)
+          Piechart of different colors
           </h4>
           <div id='pie-chart'>
           </div>

@@ -31,7 +31,7 @@ function update_barChart(bar_axis, barChart, facts, data){
     .ordering(function(d) { return -d.value; });
 }
 
-function update_pieChart(color_axis, color_scale, pieChart, facts, data){
+function update_pieChart(color_axis, pieChart, facts, data){
 
   /******************************************************
   * Create the Dimensions                               *
@@ -44,6 +44,7 @@ function update_pieChart(color_axis, color_scale, pieChart, facts, data){
 
   var pieCount = pieValue.group()
     .reduceCount(function(d) { return d[color_axis]; });
+  var color_map = data.map(function(d){return d[color_axis];});
 
   pieChart 
     .width(400)
@@ -53,11 +54,11 @@ function update_pieChart(color_axis, color_scale, pieChart, facts, data){
     .dimension(pieValue)
     .group(pieCount)
     .transitionDuration(500)
-    .ordinalColors(colorList)
+    .colors(d3.scale.category10().domain(color_map))
     .legend(dc.legend().x(10).y(10).itemHeight(13).gap(5));
 }
 
-function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, bar_axis){
+function update_bubble(xColumn, yColumn, color_axis, bubbleChart, facts, data){
 
   /******************************************************
   * Create the Dimensions                               *
@@ -65,8 +66,10 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
   * Crossfilter can filter by exact value, or by range. *
   ******************************************************/
   var bubbleValue = facts.dimension(function (d){
-    return [d[xColumn], d[yColumn], d[bar_axis[0]]];
+    return [d[xColumn], d[yColumn], d[color_axis]];
   });
+
+  var color_map = data.map(function(d){return d[color_axis];});
 
   var bubbleGroup = bubbleValue.group().reduce(
       function (p, d){
@@ -75,8 +78,7 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
         p.ySum += d[yColumn];
         p.xColumn = p.xSum / parseFloat(p.count);
         p.yColumn = p.ySum / parseFloat(p.count);
-        p.color = d[bar_axis[0]];
-        p.size = d[bar_axis[1]];
+        p.color = d[color_axis];
         return p;
       },
       function (p, d){
@@ -86,11 +88,10 @@ function update_bubble(xColumn, yColumn, color_scale, bubbleChart, facts, data, 
         p.xColumn = p.count==0? 0: p.xSum / parseFloat(p.count);
         p.yColumn = p.count==0? 0: p.ySum / parseFloat(p.count);
         p.color = "";
-        p.size = 0;
         return p;
       },
       function (p, d){
-        return {count:0, xSum:0, ySum:0, xColumn:0, yColumn:0, color:"", size:0};
+        return {count:0, xSum:0, ySum:0, xColumn:0, yColumn:0, color:""};
       }
      );
 
@@ -101,9 +102,8 @@ bubbleChart.width(700)
 	.dimension(bubbleValue)
 	.group(bubbleGroup)
 	.transitionDuration(500)
-	.colors(color_scale)
+	.colors(d3.scale.category10().domain(color_map))
 	.colorAccessor(function (p) {
-    console.log(p.value.color, color_scale(p.value.color));
 		return p.value.color;
 	    })
 	.keyAccessor(function (p) {
@@ -145,7 +145,7 @@ function plot(dataset){
       n_bar = data["number of category data"];
       scatter_axis = data["numerical"];
       bar_axis = data["category"];
-      color_axis = "Type";
+      color_axis = data["color"];
 
       var selectX = document.getElementById("selectX");
       selectX.options.length=0;
@@ -174,6 +174,19 @@ function plot(dataset){
 
       }
 
+      var selectColor = document.getElementById("selectColor");
+      selectColor.options.length=0;
+      var optionsColor = color_axis;
+      for(var i = 0; i < optionsColor.length; i++) {
+          var opt = optionsColor[i];
+          var el = document.createElement("option");
+          el.textContent = opt;
+          el.value = opt;
+          if(i==0)
+            el.selected = true;
+          selectColor.appendChild(el);
+      }
+
       var selectBar = document.getElementById("selectBar");
       selectBar.options.length=0;
       var optionsBar = bar_axis;
@@ -182,12 +195,10 @@ function plot(dataset){
           var el = document.createElement("option");
           el.textContent = opt;
           el.value = opt;
-          if(i==0)
+          if(i==1)
             el.selected = true;
           selectBar.appendChild(el);
-
       }
-
 
       // load data from a csv file
       d3.csv("data_"+dataset+".csv", function (data) {
@@ -205,47 +216,49 @@ function plot(dataset){
 
         var facts = crossfilter(data);  // Gets our 'facts' into crossfilter
 
-        if(dataset=="facebook"){
-	    var color_scale = d3.scale.ordinal()
-	      .domain(["Link","Photo","Status","Video"]).range(colorList);
-        }else if(dataset=="wine"){
-	    var color_scale = d3.scale.ordinal()
-	      .domain(["red","white"]).range([colorList[0], colorList[1]]);
-        }
-
         // for bar plot
-        update_barChart(bar_axis[0], barChart, facts, data);
+        update_barChart(bar_axis[1], barChart, facts, data);
 
         // for pie plot
-        update_pieChart(color_axis, color_scale, pieChart, facts, data);
+        update_pieChart(color_axis[0], pieChart, facts, data);
         
         //bubble chart
-        update_bubble(scatter_axis[0], scatter_axis[1], color_scale, bubbleChart, facts, data, bar_axis);
+        update_bubble(scatter_axis[0], scatter_axis[1], color_axis[0], bubbleChart, facts, data);
 
         dc.renderAll();
 
         d3.select('#selectX')
          .on('change', function(){ 
-	  resetAll();
           var e = d3.select("#selectY").node(); 
           var optionY = e.value;
-          update_bubble(this.value, optionY, color_scale, bubbleChart, facts, data, bar_axis);
+          var optionColor = d3.select("#selectColor").node().value;
+          update_bubble(this.value, optionY, optionColor, bubbleChart, facts, data);
           dc.redrawAll(); });
 
         d3.select('#selectY')
          .on('change', function(){ 
-	  resetAll();
           var e = d3.select("#selectX").node(); 
           var optionX = e.value;
-          update_bubble(optionX, this.value, color_scale, bubbleChart, facts, data, bar_axis);
+          var optionColor = d3.select("#selectColor").node().value;
+          update_bubble(optionX, this.value, optionColor, bubbleChart, facts, data);
           dc.redrawAll(); });
 
-        d3.select('#selectBar')
+      d3.select('#selectColor')
          .on('change', function(){ 
-	  resetAll();
+          resetAll();
+          var optionX = d3.select("#selectX").node().value;
+          var optionY = d3.select("#selectY").node().value;
+          update_pieChart(this.value, pieChart, facts, data);
+          update_bubble(optionX, optionY, this.value, bubbleChart, facts, data);
+          dc.redrawAll(); });
+
+      d3.select('#selectBar')
+         .on('change', function(){ 
+      	  resetAll();
           update_barChart(this.value, barChart, facts, data);
           dc.redrawAll(); });
       });
+
   });
 }
 

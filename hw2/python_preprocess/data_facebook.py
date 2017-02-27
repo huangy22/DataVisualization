@@ -29,7 +29,8 @@ def read_table(rawfile):
 
 def metadata(df):
     print list(df)
-    dict = {'category': ['Type', 'Category', 'Post Month', 'Post Weekday', 'Post Hour', 'Paid'],
+    dict = {'color': ['Type', 'Category', 'Post Weekday', 'Paid'],
+            'category': ['Type', 'Category', 'Post Month', 'Post Weekday', 'Post Hour', 'Paid'],
             'number of category data': 6,
             'number of numerical data': 13,
             'numerical': ['Page total likes','Lifetime Post Total Reach', 'Lifetime Post Total Impressions', 'Lifetime Engaged Users', 'Lifetime Post Consumers', 'Lifetime Post Consumptions', 'Lifetime Post Impressions by people who have liked your Page', 'Lifetime Post reach by people who like your Page', 'Lifetime People who have liked your Page and engaged with your post', 'comment', 'like', 'share', 'Total Interactions']}
