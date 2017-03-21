@@ -10,10 +10,6 @@ import numpy as np
 import pandas as pd
 from io import StringIO
 
-from sklearn.linear_model import Ridge
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.pipeline import make_pipeline
-
 def read_table(rawfile1, rawfile2):
     """read Wine tables into a dataframe"""
     df1 = pd.read_csv(rawfile1, na_values=[''])

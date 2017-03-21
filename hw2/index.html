@@ -24,7 +24,11 @@
 
     text-decoration: none;
     color: initial;
-}
+    }
+    span {
+    display:table;
+    margin:0 auto;
+    }
   </style>
 </head>
 
@@ -40,91 +44,123 @@
       <a class="navbar-brand" href="#">Dataset</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="javascript:plot('facebook');">Facebook</a></li>
-      <li><a href="javascript:plot('wine');">Wine</a></li>
+      <li class="active"><a href="javascript:plot('facebook');show('facebook-charts');">Facebook</a></li>
+      <li><a href="javascript:plot('wine');hide('facebook-charts');">Wine</a></li>
     </ul>
   </div>
 </nav>
 
-  <div class='row'>
-    <div class='span12'>
-      <div class='span8' id='dc-bubble-chart'>
-	<h4> Scatterplot</h4>
-        <p>x Axis:
-        <select id="selectX">
-          <option>Select X axis</option>
-        </select>
-      	y Axis:
-      	<select id="selectY">
-      	  <option>Select Y axis</option>
-      	</select>
+  <div id="generic-charts" class='row'>
+    <div class='col-sm-8' id='dc-bubble-chart'>
+    	<div id="title-bubble"></div>
+      <p>x Axis:
+      <select id="selectX">
+        <option>Select X axis</option>
+      </select>
+      </p>
+    	<p>y Axis:
+    	<select id="selectY">
+    	  <option>Select Y axis</option>
+    	</select>
+      </p>
+      <!-- <p><button class="button" id="resetBubble" >reset</button> </p> -->
+      <div id="bubble-chart">
+        <!-- <span class="display-qux"></span>  -->
+      </div>
+    </div>
+    <div class='col-sm-4' id='dc-small-charts'>
+      <!-- <p><button class="button" id="resetBar" >reset</button> </p>  -->
+      <p>
+        <div id="title-pie"></div>
+        <p>
         color:
         <select id="selectColor">
           <option>Select Color</option>
         </select>
         </p>
-        <!-- <p><button class="button" id="resetBubble" >reset</button> </p> -->
-        <div id="bubble-chart">
-          <!-- <span class="display-qux"></span>  -->
+        <div id='pie-chart'>
         </div>
-      </div>
-      <div class='span4' id='dc-small-charts'>
-        <!-- <p><button class="button" id="resetBar" >reset</button> </p>  -->
-        <p>
-          <h4>
-          Piechart of different colors
-          </h4>
-          <div id='pie-chart'>
-          </div>
-        </p>
+      </p>
 
+      <p>
+        <div id="title-bar"></div>
         <p>
-          <h4>
-          Histograms
-          </h4>
-          <p>
-          x Axis:
-          <select id="selectBar">
-            <option>Select X axis</option>
-          </select>
-          </p>
-          <div id='bar-chart'>
-          </div>
+        x Axis:
+        <select id="selectBar">
+          <option>Select X axis</option>
+        </select>
         </p>
-      </div>
+        <div id='bar-chart'>
+        </div>
+      </p>
     </div>
-    <a  href="javascript:resetAll();" class="btn btn-default" > reset all</a>
   </div>
 
-  <h5>Generated with 
-    <a href="http://nickqizhu.github.io/dc.js/">dc.js</a>,
-    <a href="http://square.github.io/crossfilter/">crossfilter</a>, 
-    <a href="http://d3js.org/">d3.js</a> and 
-    <a href="http://twitter.github.io/bootstrap/">bootstrap</a>.
-  </h5>
+  <div id='facebook-charts' style= "display:block;" class='row'>
+    <div class='col-sm-6' id='dc-heatmap'>
+        <div id="title-heatmap"></div>
+        <p>
+        Value:
+        <select id="selectHeatValue">
+          <option>Select Value</option>
+        </select>
+        </p>
+        <div id='heatmap'>
+        </div>
+        <div id='heat-legend'>
+        </div>
+    </div>
 
-  <p>The facebook dataset is public available for research. The details are described in [Moro et al., 2016].</p>
-
-  <p>[Cortez et al., 2009] P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
-        Modeling wine preferences by data mining from physicochemical properties.
-	In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
-  Available at: <a href="http://dx.doi.org/10.1016/j.dss.2009.05.016"> [Elsevier] </a>
-  <a href="http://www3.dsi.uminho.pt/pcortez/winequality09.pdf"> [Pre-press (pdf)] </a>
-  <a href="http://www3.dsi.uminho.pt/pcortez/dss09.bib"> [bib]</a>
-  </p>
+    <div class='col-sm-6' id='dc-line-chart'>
+        <div id="title-line"></div>
+        <p>x Axis:
+        <select id="selectX-line">
+          <option>Select X axis</option>
+        </select>
+        </p>
+        <p>y Axis:
+        <select id="selectY-line">
+          <option>Select Y axis</option>
+        </select>
+        </p>
+        <div id='line-chart'>
+        </div>
+    </div>
+  </div>
   
-  <p>The wine dataset is public available for research. The details are described in [Cortez et al., 2009]. </p>
+  <div id="footer" class='row'>
+    <a  href="javascript:resetAll();" class="btn btn-default" > reset all</a>
 
-  <p>[Moro et al., 2016] S. Moro, P. Rita and B. Vala. Predicting social media performance metrics and evaluation 
-  of the impact on brand building: A data mining approach. Journal of Business Research, Elsevier, In press.
-  Available at: <a href ="http://dx.doi.org/10.1016/j.jbusres.2016.02.010"> http://dx.doi.org/10.1016/j.jbusres.2016.02.010</a></p>
+    <h5>Generated with 
+      <a href="http://nickqizhu.github.io/dc.js/">dc.js</a>,
+      <a href="http://square.github.io/crossfilter/">crossfilter</a>, 
+      <a href="http://d3js.org/">d3.js</a> and 
+      <a href="http://twitter.github.io/bootstrap/">bootstrap</a>.
+    </h5>
 
-</div>
+    <p>The facebook dataset is public available for research. The details are described in [Moro et al., 2016].</p>
+
+    <p>[Cortez et al., 2009] P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
+          Modeling wine preferences by data mining from physicochemical properties.
+  	In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
+    Available at: <a href="http://dx.doi.org/10.1016/j.dss.2009.05.016"> [Elsevier] </a>
+    <a href="http://www3.dsi.uminho.pt/pcortez/winequality09.pdf"> [Pre-press (pdf)] </a>
+    <a href="http://www3.dsi.uminho.pt/pcortez/dss09.bib"> [bib]</a>
+    </p>
+    
+    <p>The wine dataset is public available for research. The details are described in [Cortez et al., 2009]. </p>
+
+    <p>[Moro et al., 2016] S. Moro, P. Rita and B. Vala. Predicting social media performance metrics and evaluation 
+    of the impact on brand building: A data mining approach. Journal of Business Research, Elsevier, In press.
+    Available at: <a href ="http://dx.doi.org/10.1016/j.jbusres.2016.02.010"> http://dx.doi.org/10.1016/j.jbusres.2016.02.010</a></p>
+  </div>
+
 </div>
 </div>
   
 <script type="text/javascript" src="plot.js"></script>
 <script type="test/javascript">
+
 </script>
 
   
