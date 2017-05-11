@@ -144,8 +144,8 @@ function plot_level3(level1, level2, color){
 
 function plot_level3_text(){
 
-  var width = 290,
-      height = 290,
+  var width = 280,
+      height = 280,
       radius = 4,
       padding = 0.5;
 

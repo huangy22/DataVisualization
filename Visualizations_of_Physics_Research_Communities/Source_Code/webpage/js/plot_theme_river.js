@@ -44,7 +44,6 @@ function plot_theme_level1(){
         function(d){
            plot_theme_level2(d.number, d.color);
            plot_level2(d.number, d.color, d.key);
-           d3.select("#article-network-level3").selectAll("*").remove();
            plot_level3_text();
         });
     });

@@ -71,7 +71,6 @@ function plot_level1(){
           // d3.select(this).style("opacity", 1.0);
           plot_theme_level2(d.name, d.color);
           plot_level2(d.name, d.color, d.title);
-          d3.select("#article-network-level3").selectAll("*").remove();
           plot_level3_text();
         });
 
