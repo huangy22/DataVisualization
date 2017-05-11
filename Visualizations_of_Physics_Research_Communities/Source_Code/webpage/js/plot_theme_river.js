@@ -7,7 +7,7 @@ function plot_theme_level1(){
       nv.addGraph(function() {
         var chart = nv.models.stackedAreaChart()
                       .style('stream')
-                      .margin({top:30, right: 40})
+                      .margin({right: 40})
                       .x(function(d) { return d[0]; }) //We can modify the data accessor functions...
                       .y(function(d) { return d[1]; })   //...in case your data is formatted differently.
                       .color(function(d){return d.color;})
@@ -45,6 +45,7 @@ function plot_theme_level1(){
            plot_theme_level2(d.number, d.color);
            plot_level2(d.number, d.color, d.key);
            d3.select("#article-network-level3").selectAll("*").remove();
+           plot_level3_text();
         });
     });
   });
@@ -59,7 +60,7 @@ function plot_theme_level2(level1, color){
   d3.json('../data/level2/'+level1+'_theme_river.json', function(data) {
       nv.addGraph(function() {
         var chart = nv.models.stackedAreaChart()
-                      .margin({top: 30, right: 40})
+                      .margin({right: 40})
                       .x(function(d) { return d[0]; }) //We can modify the data accessor functions...
                       .y(function(d) { return d[1]; })   //...in case your data is formatted differently.
                       .color(function(d){ return d3.rgb(color).brighter(d.key/3);})
