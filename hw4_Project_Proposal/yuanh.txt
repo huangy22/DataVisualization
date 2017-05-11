@@ -1,0 +1,20 @@
+Grade: A
+
+Notes:
+
+	Good dataset, and great hypotheses. One thing that would be really
+	cool to see is if you could identify parallel trends in separate 
+	subfields that eventually get linked together (I'm not sure if its 
+	possible with your dataset though).
+
+	Analytics look good. You should look into topic modeling if you aren't
+	familiar with it. You might find a lot of advanced tools for reasoning
+	about these kinds of relationships between documents that are already
+	implemented for Python.
+
+	The visualizations sound good.
+
+	Great layout. You might consider grouping them based on whether they 
+	analyze authors, articles, or institutions. Especially with the two
+	network visualizations, doing so could make it easier for users to
+	understand what they're looking at.
