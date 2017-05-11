@@ -7,7 +7,7 @@
 \usepackage[caption = false]{subfig}
 %\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
 
-\title{Visualization of Community Structure in Scientific Networks}
+\title{Visualization of Community Structures in Scientific Networks}
 
 \author{
 Yuan Huang \\
@@ -36,9 +36,10 @@ Amherst, MA, 01002 \\
 \section{Introduction}
 \label{intro}
 
-Detecting community structure is an important task in the field of complex networks. Community structure in a network refers to that the vertices in networks are often found to cluster into different groups with a large number of within-group edges and a small number of edges between groups. In this paper, we focus on the community structure in the citation networks of academic articles. The analysis of the underlying community structure in citation networks provides numerous benefits for the development of the research field, including building a foundation for future research through the acknowledgement of past research activities; identifying gaps in research for researchers and students; improving the integration between theory and practice, and so on~\cite{phys_rev, OLED, learning_analytics, sustain}. On the other hand, finding clusters in network-structured data is a fundamental problem that has many applications in social networks and other related fields. 
+Detecting community structure is an important task in the field of complex networks. Community structure refers to that the vertices in networks tend to cluster into different groups with a large number of within-group edges and a small number of edges between groups. In this paper, we focus on the community structure in the citation networks of academic articles. The analysis of the underlying community structure in citation networks provides numerous benefits for the development of the research field, including building a foundation for future research through the acknowledgement of past research activities; identifying gaps in research for researchers and students; improving the integration between theory and practice, and so on~\cite{phys_rev, OLED, learning_analytics, sustain}. On the other hand, finding clusters in network-structured data is a fundamental problem that has many applications in social networks and other related fields. 
 
-In this project, we will apply two recently proposed clustering methods\cite{bottom_up, new_method} to detect the community structure in Physical Review citation network. The first method is a bottom-up agglomerative clustering method based on modularity maximization, which is computationally more efficient than the previous divisive approach ~\cite{phys_rev}. The other clustering method is based on non-binary hierarchical tree with overlapping clusters~\cite{new_method}, which has been tested for some well-known benchmark network datasets, but not in a large-scale citation network before. We test the robustness of these two methods and check the significance of our results using the modularity measure. We apply both algorithms to the Physical Review citation network to resolve its major communities and the connections between them. We also visualize the structure of the individual communities.
+As I start this project, I wish to use various network visualization to answer the following questions: 1) How do different subfields of physics evolve in time? Which subfields are fast growing in recent years? 2) Who are the physicists with most impact in a specified field of physics? How are the top physicists interacting with each other (through citation and collaboration)? 3) What are the top institutions for a specified field? How are the institutions collaborating with each other? So far, the project includes the first two questions regarding the subfield analysis and top physicists in a specified field. Hopefully the intitutions analysis can be realized in the future.
+
 
 %%%%Add results
 
@@ -54,56 +55,79 @@ In 2010, Chen and Redner~\cite{phys_rev} investigated the community structure of
 
 In 2011, Zhao and Zhang~\cite{new_method} proposed a new clustering method for detecting community structures. In this method, individuals and their relationships are denoted by weighted graphs, then the graph density gives a better quantity depict of whole correlation among individuals in a community, so that a reasonable clustering output can be presented. By constructing a non-binary hierarchical tree of clusters, this method has two important features: one is that the hierarchical tree is much smaller that clearly highlights meaningful clusters; the other one is the clusters can overlap with each other which does reflect the complexity of our real world.
 
-%%%Expand on the three papers
-
-\section{Methodology}
-\label{method}
-
-Various clustering algorithms have been proposed in the literature in many different scientific disciplines. These clustering algorithms can be broadly divided into two groups: (i) hierarchical method and (ii) partitional method. For network data, the most commonly used clustering algorithms are hierarchical algorithms. In recent years, a growing number of hierarchical clustering algorithms for network data have been proposed based on various centrality measures~\cite{method_review}. In this project, we are going to use two clustering methods proposed in Ref~\cite{bottom_up, new_method}. 
-
-\subsection{Agglomerative Modularity Maximization Clustering} 
-
-The first algorithm is based on the idea of modularity. Given a network graph $G = (V, E)$ with the vertex set $V$ and the edge set $E$, a community structure algorithm always produces some division of vertices into communities (or clusters). To characterize whether a particular division is meaningful a quality function "modularity" can be defined as follows~\cite{Newman_algorithm}. Let $e_{ij}$ be the fraction of edges that connect from vertices in group $i$ to those in group $j$, $a_i$ be the fraction of all edges coming out of group $i$, then the modularity
-\begin{equation}
-Q = \sum_i (e_{ii} - a_i^2)
-\end{equation}
-characterizes the fraction of edges that fall within each communities, minus the background value if all the edges are distributed randomly. If a particular division is totally random, the modularity will be $Q=0$. Modularity $Q$ greater other than 0.3 indicates significant community structure in the division.
-
-An exhaustive search of all possible divisions for the optimal value of $Q$ is very computationally expensive and in practice infeasible. Therefore, a greedy optimization algorithm needs to be applied to perform clustering. This algorithm works as follows: Starting from a state where each node is in its unique community, we repeatly join pairs of communities into one, until we reach the maximal modularity. At each step, we choose the join that can result in the largest increase (or smallest decrease) in modularity $Q$. The change in $Q$ with respect to joining two communities is given by
-\begin{equation}
-\Delta Q = e_{ij} + e_{ji} - 2 a_i a_j
-\end{equation}
-In this algorithm, each hierarchical step takes $O(m+n)$ time, where $m$ is the number of edges and $n$ is the number of vertices. The complete algorithm runs in time $O((m+n)n)$ or $O(n^2)$ if the graph is sparse.
-
 \section{Data Sets}
 \label{data}
+
 The data set has been requested from the American Physics Society website and contains over 450,000 articles from Physical Review Letters, Physical Review, and Reviews of Modern Physics dating from 1893 to 2015. The data sets have two parts:
 (1) citing article pairs, which consists of pairs of APS articles that cite each other in format "10.1103/PhysRevSeriesI.11.215, 10.1103/PhysRevSeriesI.1.1"(first string is the doi of the citing article, while the second string is the doi of the cited article); (2) article metadata which consists of the basic metadata of all APS journal articles including doi, title, journal, date, volume, page, author, affiliations, and so on (each article is stored in individual json files).
 
-In this project, we will mainly use the citation dataset and perform clustering algorithm on the citation network of all the articles published in Physical Review Letter, Review of Modern Physics, and Physical Review X from 2007 to 2015. To get this subset of citation network, we load all the article metadata and citation data into a mongodb database, and use the journal and date features in the metadata to filter the citation data. This results in a network of 27695 articles and 91346 citation links between them.
+In this project, we will focus on all the articles published in Physical Review Letter, Review of Modern Physics, and Physical Review X from 2007 to 2015, and perform clustering algorithm on the citation network of these articles. To get this subset of citation network, we load all the article metadata and citation data into a mongodb database, and use the journal and date features in the metadata to filter the citation data. This results in a network of 27695 articles and 91346 citation links between them.
 
-\section{Experiments and Results}
+The clustering analysis and visualizations of the citation network and community structures can help the users to learn about the research history in physics and identify interesting fields. After identifying a subfield which is potentially interesting, the visualizations of the community networks can help the users to find out the top physicists that are working on the selected field, papers with the most impacts in the field, and see the trend of each field in physics.
 
-\subsection{Results on the Whole Dataset}
+\section{Exploratory Analysis}
 
-Based on the test for both algorithms, the agglomerative modularity maximization method outperforms the non-binary tree clustering both on performance and computational time cost. Therefore we are going to apply the modularity maximization clustering algorithm on our whole dataset including 27695 articles and 91346 citation links. 
+In this project, we apply a hierarchical clustering algorithm based on modularity maximization to cluster the network of 27695 articles and 91346 citation links. The first step is to use pymongo to load the mongo database in python. Then we apply the clustering algorithm for the citation network data.
 
-The modularity of the clustering as a function of different hierarchical levels is shown in Fig~\ref{fig:modularity_whole_a}. The modularity function peaks at $Q=0.762$, when the number of cluster is 500. This value indicates a strong community structure in the network. We also perform analysis on the distribution of cluster sizes in this algorithm with optimal hierarchical level ($N=500$), shown in Fig~\ref{fig:modularity_whole_b}. The simulation with the agglomerative modularity maximization algorithm on a network of 27695 articles and 91346 citation links takes about 1.5 hours. We also visualize the result of clustering using a force directed graph built with D3 visualization library, see Fig~\ref{fig:modularity_whole_c}. In this graph, the size of bubble represents the size of each cluster, while the link width represents number of citations between two clusters. We can see a clear power-law distribution of cluster sizes in this visualization.
+Modularity maximization is a bottom-up hierarchical clustering algorithm which repeatedly merges two clusters into one in order to optimize the modularity of the clustering. This algorithm works as follows: Starting from a state where each node is in its unique community, we repeatly join pairs of communities into one, until we reach the maximal modularity. I implement this algorithm from scratch using python and apply this clustering algorithm on the citation network. The modularity function peaks at $Q = 0.762$, when the number of cluster is 500, shown in Fig~\ref{fig:modularity_whole_a}. This value is rather high in real world network data, indicating a strong community structure in our citation network. 
+As we perform analysis on the clustering result, one observation is that the size of clusters features a power-law distribution, where the largest cluster has nearly 5000 articles, while the majority of clusters are rather small with less than 1000 articles, shown in Fig~\ref{fig:modularity_whole_b}. In this project, we decide to focus on the large clusters with more than 1000 articles (there are 13 large clusters in total) since they are more representative as different fields in physics. 
 
 \begin{figure}[h]
   	\centering
 	\vspace{-20pt}
-	\subfloat[][Modularity function.]{\includegraphics[width = 2in]{../Figures/Modularity_Maximization_modularity_score_whole.pdf}\label{fig:modularity_whole_a}}
-  	\subfloat[][Cluster size distribution.]{\includegraphics[width = 2in]{../Figures/Modularity_Maximization_cluster_size_whole.pdf}\label{fig:modularity_whole_b}}
-  	\subfloat[h][Network of Clusters.]{\includegraphics[width = 1.5in]{../Figures/visualization_whole.png}\label{fig:modularity_whole_c}}
- 	\caption{The modularity function, the cluster size distribution function, and the resulting cluster network in the simulation with the agglomerative modularity maximization algorithm on the whole network.}
+	\subfloat[][Modularity function.]{\includegraphics[width = 3in]{./Figures/Modularity_Maximization_modularity_score_whole.pdf}\label{fig:modularity_whole_a}}
+  	\subfloat[][Cluster size distribution.]{\includegraphics[width = 3in]{./Figures/Modularity_Maximization_cluster_size_whole.pdf}\label{fig:modularity_whole_b}}
+ 	\caption{The modularity function, and the cluster size distribution function in the simulation with the modularity maximization algorithm on the citation network.}
  	\vspace{-10pt}
   \label{fig:modularity_whole}
 \end{figure}
 
-\section{Discussion and Conclusions}
+With the obtained clustering result, we can perform different analysis on the dataset. First, we query the database using pymongo library to obtain the papers with high citation numbers in each cluster. As we look at those papers with high impact, we summarize the topic in each cluster and use it as the cluster's name. Then, we extract the number of articles published over time for each cluster to study the trend in physics research. Another useful analysis is the authors with the most publications in each field of physics. From this analysis, we can identify the physicists with high impact in different fields. All the results from these analysis are dumped into json files for visualizations.
 
-The agglomerative modularity maximization clustering has performed well for a network of citations between more than twenty-thousand physics articles. The resulting community structure corresponds closely to the research groups in the field. The modularity of the final clustering has a peak at $Q=0.762$, which is rather high in real world networks. This indicates strong community structure in the physics world. One could try to follow each individual community to observe how they break up. One can also perform the time evolution of the community structure by splitting the citation network according to different periods of time. 
+\section{Implementations of Visualizations}
+
+The implementation of the visualizations are based on D3, NVD3, bootstrap, jqurey libraries. The landing page and layout design are based on start bootstrap templates. The visualizations on the webpage include two parts: the visualizations for articles, and physicists.
+
+\subsection{Articles}
+The network of articles is visualized using D3 force-layout bubble charts(Fig~\ref{fig:cluster_whole}). The size of bubbles represents the number of articles in each community, while the width of links represents the number of citations between two communities. Clicking on each bubble in the first and second charts will trigger the chart to its right to show the corresponding structures inside the clicked cluster. In the right most chart with network of each individual articles, clicking on each node will open a new tab in your browser and go to the APS webpage of the selected article.
+
+\begin{figure}[h]
+  	\centering
+  	\subfloat[][]{\includegraphics[width = 3in]{./Figures/visualization_whole.png}}
+  	\subfloat[][]{\includegraphics[width = 3.05in]{./Figures/visualization_cm.png}}
+ 	\caption{Visualizations of the network of articles.}
+ 	\vspace{-10pt}
+  \label{fig:cluster_whole}
+\end{figure}
+
+The evolution of communities over time is visualized using stacked area charts implemented with NVD3 library(Fig~\ref{fig:theme_river}). The visualizations support selections, probing, and changing layout. Select one area in the left chart will trigger the right chart to show the corresponding sub-fields in the select field. Selecting in either the left most cluster bubble chart or the left stacked area chart will simultaneously trigger all the rest charts to respond.
+
+\begin{figure}[h]
+  	\centering
+    \includegraphics[width = 5in]{./Figures/theme_river.png}
+ 	\caption{Visualizations of the evolution of different fields in time.}
+ 	\vspace{-10pt}
+  \label{fig:theme_river}
+\end{figure}
+ 
+\subsection{Physicists}
+The physicists in different fields is visualized using D3 force-layout bubble charts(Fig~\ref{fig:author_whole}). The left chart is the same with the first chart in the network of articles. The right one shows the physicists from different fields, represented by bubbles with color denoting the field, and size denoting the number of publications. The typical number of publications in different fields vary dramatically, therefore I normalize the size according to the largest node in each cluster. One interesting observation is that the authors in nuclear physics and astrophysics tend to publish much more papers than other fields. Clicking on a bubble in the left chart will highlight the selected field in the right chart. Clicking on each individual node in the right bubble chart will open a new tab in your browser and start a Google search for the selected physicist.
+
+\begin{figure}[h]
+  	\centering
+    \includegraphics[width = 5in]{./Figures/author_whole.png}
+ 	\caption{Visualizations of the physicists in different fields.}
+ 	\vspace{-10pt}
+  \label{fig:author_whole}
+\end{figure}
+
+\section{Links}
+The link to the webpage is \url{http://www-edlab.cs.umass.edu/~yuanh/590v/project/pages/index.html}.
+
+The whole dataset can be requested at \url{https://journals.aps.org/datasets}.
+
+\section{Acknowledgements}
+I want to thank the \href{https://journals.aps.org/}{American Physical Society} for offering the dataset for this project. Image credits to \href{https://wallpapersafari.com/w/fKpsS1}{Martin Driver}, \href{http://img15.deviantart.net/b424/i/2013/157/b/f/the_hitchhiker_s_guide_to_the_galaxy_wallpaper_by_lucaszanella-d6821pm.png}{deviantart.net}., and \href{https://society6.com/product/dont-panic-9mv_print#s6-1258355p4a1v45}{society6.com}. The webpage template is adapted from \href{https://startbootstrap.com/}{Start Bootstrap}.
 
 \small{
 \begin{thebibliography}{9}

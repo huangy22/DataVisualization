@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 MAY 2017 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 MAY 2017 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -338,106 +338,140 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
  [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<./Figures/Modularity_Maximization_modularity_score_whole.pdf, id=78, 433.62pt 
+x 289.08pt>
+File: ./Figures/Modularity_Maximization_modularity_score_whole.pdf Graphic file
+ (type pdf)
+ <use ./Figures/Modularity_Maximization_modularity_score_whole.pdf>
+Package pdftex.def Info: ./Figures/Modularity_Maximization_modularity_score_who
+le.pdf used on input line 78.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-LaTeX Warning: File `../Figures/Modularity_Maximization_modularity_score_whole.
-pdf' not found on input line 96.
+<./Figures/Modularity_Maximization_cluster_size_whole.pdf, id=79, 433.62pt x 28
+9.08pt>
+File: ./Figures/Modularity_Maximization_cluster_size_whole.pdf Graphic file (ty
+pe pdf)
+ <use ./Figures/Modularity_Maximization_cluster_size_whole.pdf>
+Package pdftex.def Info: ./Figures/Modularity_Maximization_cluster_size_whole.p
+df used on input line 79.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-
-! Package pdftex.def Error: File `../Figures/Modularity_Maximization_modularity
-_score_whole.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.96 ..._whole.pdf}\label{fig:modularity_whole_a}}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Figures/Modularity_Maximization_cluster_size_whole.pdf'
- not found on input line 97.
-
-
-! Package pdftex.def Error: File `../Figures/Modularity_Maximization_cluster_si
-ze_whole.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 ..._whole.pdf}\label{fig:modularity_whole_b}}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 78--80
+ [][][][][] 
+ []
 
 
-LaTeX Warning: File `../Figures/visualization_whole.png' not found on input lin
-e 98.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-! Package pdftex.def Error: File `../Figures/visualization_whole.png' not found
-.
+Underfull \vbox (badness 1082) has occurred while \output is active []
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98 ..._whole.png}\label{fig:modularity_whole_c}}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ [2]
+<./Figures/visualization_whole.png, id=89, 599.23875pt x 299.1175pt>
+File: ./Figures/visualization_whole.png Graphic file (type png)
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+<use ./Figures/visualization_whole.png>
+Package pdftex.def Info: ./Figures/visualization_whole.png used on input line 9
+6.
+(pdftex.def)             Requested size: 216.81pt x 108.22078pt.
+
+<./Figures/visualization_cm.png, id=91, 609.27625pt x 301.125pt>
+File: ./Figures/visualization_cm.png Graphic file (type png)
+
+<use ./Figures/visualization_cm.png>
+Package pdftex.def Info: ./Figures/visualization_cm.png used on input line 97.
+(pdftex.def)             Requested size: 220.4237pt x 108.9425pt.
+
+Overfull \hbox (39.74872pt too wide) in paragraph at lines 96--98
+ [][][][][] 
+ []
+
+<./Figures/theme_river.png, id=93, 1178.4025pt x 388.45125pt>
+File: ./Figures/theme_river.png Graphic file (type png)
+
+<use ./Figures/theme_river.png>
+Package pdftex.def Info: ./Figures/theme_river.png used on input line 107.
+(pdftex.def)             Requested size: 361.34999pt x 119.11462pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 \end{figure}
+                   <./Figures/Modularity_Maximization_modularity_score_whole.pd
+f> <./Figures/Modularity_Maximization_cluster_size_whole.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Figures/Modularity_Maximiz
+ation_cluster_size_whole.pdf): PDF inclusion: multiple pdfs with page group inc
+luded in a single page
+> <./Figures/visualization_whole.png> <./Figures/visualization_cm.png>]
+<./Figures/author_whole.png, id=180, 1212.53pt x 365.365pt>
+File: ./Figures/author_whole.png Graphic file (type png)
+
+<use ./Figures/author_whole.png>
+Package pdftex.def Info: ./Figures/author_whole.png used on input line 118.
+(pdftex.def)             Requested size: 361.34999pt x 108.88559pt.
+
+Underfull \hbox (badness 6741) in paragraph at lines 125--126
+\OT1/ptm/m/n/10 The link to the web-page is []$\OT1/pcr/m/n/10 http : / / www-[
+]edlab . cs . umass . edu / []yuanh / 590v /
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.109 \begin{thebibliography}{9}
-                                ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+l.139 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.139 
+       <./Figures/theme_river.png> <./Figures/author_whole.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
- (./project_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+
+(./project_report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `project_report.out' has not changed.
-(rerunfilecheck)             Checksum: C5F2EF1451418BC62D797C539A0F04F3;478.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+(rerunfilecheck)             Checksum: E1454D2EB0AA82560FA055FF93D56110;469.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 6537 strings out of 493089
- 98680 string characters out of 6134842
- 188595 words of memory out of 5000000
- 9931 multiletter control sequences out of 15000+600000
+ 6568 strings out of 493089
+ 99796 string characters out of 6134842
+ 188653 words of memory out of 5000000
+ 9955 multiletter control sequences out of 15000+600000
  17078 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,47p,1019b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,47p,995b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on project_report.pdf (4 pages, 118609 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on project_report.pdf (5 pages, 443167 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
